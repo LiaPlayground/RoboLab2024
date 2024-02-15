@@ -8,6 +8,12 @@ language: de
 
 narrator: Deutsch Female
 
+import: https://raw.githubusercontent.com/liaTemplates/ABCjs/main/README.md
+
+import: https://raw.githubusercontent.com/liaTemplates/vtk/master/README.md
+
+import: https://raw.githubusercontent.com/LiaTemplates/DigiSim/master/README.md
+
 -->
 
 
@@ -1146,11 +1152,180 @@ __ Implementations__
 
 ### LiaScript
 
-* Erweiterung von Markdown zum Erstellen von interaktiven OER-Inhalten
+Erweiterung von Markdown zum Erstellen von interaktiven OER-Inhalten
 
-#### Programmierung
+* https://LiaScript.github.io
+
+* https://LiaScript.github.io/LiveEditor
+
+Versuchen sie es selbst:
+
+https://liascript.github.io/LiveEditor/?/show/file/https://raw.githubusercontent.com/LiaPlayground/RoboLab2024/main/README.md
+
+#### Technische Informatik
+
+``` json @DigiSim.evalJson
+{
+  "devices": {
+    "dev0": {
+      "label": "s",
+      "position": {
+        "x": 0,
+        "y": 20
+      },
+      "celltype": "$button",
+      "propagation": 0
+    },
+    "dev1": {
+      "label": "r",
+      "position": {
+        "x": 155,
+        "y": 75
+      },
+      "celltype": "$button",
+      "propagation": 0
+    },
+    "dev2": {
+      "label": "q",
+      "position": {
+        "x": 480,
+        "y": 55
+      },
+      "celltype": "$lamp",
+      "propagation": 1
+    },
+    "dev3": {
+      "label": "nq",
+      "position": {
+        "x": 325,
+        "y": 0
+      },
+      "celltype": "$lamp",
+      "propagation": 1
+    },
+    "dev6": {
+      "label": "$or$_input.sv:7$1",
+      "position": {
+        "x": 310,
+        "y": 50
+      },
+      "celltype": "$nor",
+      "propagation": 1,
+      "bits": 1
+    },
+    "dev7": {
+      "label": "$or$_input.sv:8$3",
+      "position": {
+        "x": 140,
+        "y": 15
+      },
+      "celltype": "$nor",
+      "propagation": 1,
+      "bits": 1
+    }
+  },
+  "connectors": [
+    {
+      "from": {
+        "id": "dev0",
+        "port": "out"
+      },
+      "to": {
+        "id": "dev7",
+        "port": "in1"
+      },
+      "name": "s",
+      "vertices": []
+    },
+    {
+      "from": {
+        "id": "dev1",
+        "port": "out"
+      },
+      "to": {
+        "id": "dev6",
+        "port": "in1"
+      },
+      "name": "r",
+      "vertices": []
+    },
+    {
+      "from": {
+        "id": "dev6",
+        "port": "out"
+      },
+      "to": {
+        "id": "dev2",
+        "port": "in"
+      },
+      "name": "q",
+      "vertices": []
+    },
+    {
+      "from": {
+        "id": "dev6",
+        "port": "out"
+      },
+      "to": {
+        "id": "dev7",
+        "port": "in2"
+      },
+      "name": "q",
+      "vertices": []
+    },
+    {
+      "from": {
+        "id": "dev7",
+        "port": "out"
+      },
+      "to": {
+        "id": "dev3",
+        "port": "in"
+      },
+      "name": "nq",
+      "vertices": []
+    },
+    {
+      "from": {
+        "id": "dev7",
+        "port": "out"
+      },
+      "to": {
+        "id": "dev6",
+        "port": "in2"
+      },
+      "name": "nq",
+      "vertices": []
+    }
+  ],
+  "subcircuits": {}
+}
+```
 
 #### Musik
 
+``` abc
+X:353
+T: GLUECK AUF DER STEIGER KOEMMT
+N: E1512
+O: Europa, Mitteleuropa, Deutschland
+R: Staende -, Bergmanns - Lied
+M: 4/4
+L: 1/16
+K: G
+ | G8F4A4 | G8z8 |
+B8A4c4 | B8z4
+G2A2 | B4B4B4A2B2 | c4A3AA4
+A2B2 | c4c4c4B2c2 | d4B3BB4
+A4 | G8F8 | G4e4d4
+c2A2 | B8A8 | G8z8
+```
+@ABCJS.eval
+
+#### Medizin
+
+@VTK.loadIframe(https://kitware.github.io/vtk-js-datasets/data/vti/head-binary-zlib.vti)
+
 ### CrossLab
 
+https://edrys-labs.github.io/edrys-Lite/
