@@ -4,6 +4,8 @@ author: André Dietrich
 
 @embed: <iframe src="https://api.allorigins.win/raw?url=@0" style="width: 100%; height: 60vh;"></iframe>
 
+version:  1.0.0
+
 language: de
 
 narrator: Deutsch Female
